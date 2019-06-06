@@ -7,7 +7,7 @@
          "stepId":"connect",
          "apiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/connect.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect.json"
          }
       },
       {
@@ -18,7 +18,7 @@
             "headers": {
                     "Elements-Formula-Instance-Id": "388728"
             },
-            "apiUrl":"https://staging.cloud-elements.com/elements/api-v2/pipedrive/syncRulesContactsSetup"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/sync_rules_contacts.json"
          }
       },
       {
@@ -29,7 +29,7 @@
             "headers": {
                     "Elements-Formula-Instance-Id": "388733"
             },
-            "apiUrl":"https://staging.cloud-elements.com/elements/api-v2/pipedrive/syncRulesDealsSetup"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/sync_rules_deals.json"
          }
       },
       {
@@ -40,7 +40,7 @@
             "headers": {
                     "Elements-Formula-Instance-Id": "388894"
             },
-            "apiUrl":"https://staging.cloud-elements.com/elements/api-v2/pipedrive/syncFieldsSetup"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json"
          }
       },
       {
@@ -48,7 +48,7 @@
          "stepId":"step_4",
          "apiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/data_validation.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/data_validation.json"
          }
       },
       {
@@ -56,7 +56,7 @@
          "stepId":"step_5",
          "apiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/initial_sync_step.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/initial_sync_step.json"
          }
       },
       {
@@ -64,7 +64,7 @@
          "stepId":"completed",
          "apiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/connect_resp.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json"
          }
       }
    ]
