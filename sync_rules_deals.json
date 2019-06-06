@@ -18,7 +18,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" &nbsp;&nbsp;&nbsp;- Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown3",
