@@ -6,7 +6,7 @@
             "type" : "INPUT",
             "params": [
                {  
-                 "dispName":"... subscription is created",
+                 "dispName":"... subscription is <b>created</b>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown2",
@@ -38,7 +38,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":"... subscription items are updated",
+                 "dispName":"... subscription items are <b>updated</b>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown5",
