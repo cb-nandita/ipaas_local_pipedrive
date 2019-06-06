@@ -20,15 +20,26 @@
                {  
                  "dispName":"<p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
-                 "type":"DROPDOWN",
+                 "type":"DROPDOWN_DYNAMIC",
                  "id":"dropdown3",
-                 "allowedValues":{
-                    "option1":"Pipeline 1"
+                 "dropDownListItemsList":[
+                    {
+                       "id": "option1",
+                       "disp":"Pipeline 1",
+                       "helptext":"Helptext",
+                       "request":{
+                        "type":"ON_CLICK_GET_LIST",
+                        "apiEndPoint":{
+                           "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json",
+                           "type":"GET"
+                           }
+                        }
+                     }]
                  },
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" &nbsp;&nbsp;&nbsp;- Choose the stage you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown4",
@@ -50,7 +61,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown6",
@@ -60,7 +71,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown7",
@@ -82,7 +93,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown9",
@@ -92,7 +103,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to<p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown10",
@@ -114,7 +125,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown12",
@@ -124,7 +135,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown13",
@@ -146,7 +157,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown15",
@@ -156,7 +167,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown16",
@@ -178,7 +189,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown18",
@@ -188,7 +199,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown19",
@@ -210,7 +221,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown21",
@@ -220,7 +231,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown22",
@@ -268,7 +279,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown25",
@@ -278,7 +289,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown26",
@@ -300,7 +311,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown28",
@@ -310,7 +321,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown29",
@@ -332,7 +343,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown31",
@@ -342,7 +353,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown32",
@@ -364,7 +375,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":" - Choose the pipeline you'd like to add this deal to",
+                 "dispName":" <p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown34",
@@ -374,7 +385,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":" - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to</p>",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown35",
