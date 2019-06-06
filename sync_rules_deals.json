@@ -25,6 +25,7 @@
                  "dropDownListItemsList":[
                  	{
                     	"id":"option1",
+                     "type":"DROPDOWNLIST",
                         "disp":"Pipeline 1",
                         "helptext":"Helptext",
                         "request":{  
