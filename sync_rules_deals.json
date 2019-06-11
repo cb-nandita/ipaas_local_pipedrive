@@ -27,6 +27,7 @@
                     	"id":"option1",
                      "type":"DROPDOWNLIST",
                         "disp":"Pipeline 1",
+                        "key":"option1",
                         "helptext":"Helptext",
                         "request":{  
                            "type":"ON_CLICK_GET_LIST",
