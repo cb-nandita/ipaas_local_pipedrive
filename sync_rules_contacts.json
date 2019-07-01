@@ -74,7 +74,7 @@
                {  
                   "dispName":"When a customer is deleted in Chargebee",
                  "req":"true",
-                 "type":"DROPDOWN_DYNAMIC",
+                 "type":"DROPDOWN",
                  "id":"dropdown3",
                  "allowedValues":{
                     "option1":"Do Nothing",
