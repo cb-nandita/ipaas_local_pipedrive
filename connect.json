@@ -10,7 +10,7 @@
 	"display" : "Connect",
 	"icon" : "ARROW",
         "buttonLook":"FILLED",
-	"type" : "POP_UP"
+	"type" : "POP_UP",
 	"popUp":{  
 	   "inputFields":[  
 	      {  
