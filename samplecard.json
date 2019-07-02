@@ -1,5 +1,28 @@
 {
    "cards" : [
+	   
+	   {
+         "card": {
+            "type" : "MAPPING",
+            "heading":"Map Customers from Chargebee to Pipedrive",
+            "contents":"Choose a unique field to identify and sync customers from Chargebee to Pipedrive\n<a href=\"\" target=\"blank\">Learn More</a>",
+            "leftFields":{
+                  "title":"Chargebee Customer Field",
+                  "allowedValues":{
+			            "option1":"Left My List 2",
+			            "option2":"Left My List 3"
+                  }
+			         },
+             "rightFields":{
+                   "title":"Pipedrive Person Field",
+                   "allowedValues":{
+			              "option1":"My List 2",
+			              "option2":"My List 3"
+                   }
+			         }  
+         },
+         "id" : "checkmapp"
+      },
       {
          "card": {
             "type" : "INPUT",
