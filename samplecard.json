@@ -12,7 +12,8 @@
                   "allowedValues":{
 			            "option1":"Left My List 2",
 			            "option2":"Left My List 3"
-                  }
+                  },
+		    "defaultValue":"option1"
 			         },
              "rightComponent":{
 		     "id":"right-comp",
