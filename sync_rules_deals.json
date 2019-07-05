@@ -23,7 +23,7 @@
                  "req":"true",
                  "type":"DROPDOWN_DYNAMIC",
                  "id":"dropdown3",
-                 "dropDownListItemsList":[
+                 "dropDownItemsList":[
                  	   {
                      	"value":"option1",
                         "disp":"Pipeline 1",
