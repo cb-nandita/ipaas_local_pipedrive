@@ -24,19 +24,16 @@
                  "type":"DROPDOWN_DYNAMIC",
                  "id":"dropdown3",
                  "dropDownListItemsList":[
-                 	{
-                    	"id":"option1",
-                     "type":"DROPDOWNLIST",
+                 	   {
+                     	"value":"option1",
                         "disp":"Pipeline 1",
-                        "helptext":"Helptext",
-                        "request":{  
-                           "type":"ON_CLICK_GET_LIST",
-                           "apiEndPoint":{  
-                              "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json",
-                              "type":"GET"
-                           }
-                        }
-                 	}
+                        "helptext":"Helptext1"
+                 	   },
+                     {
+                     	"value":"option2",
+                        "disp":"Pipeline 2",
+                        "helptext":"Helptext2"
+                 	   }
                  	],
                   	"defaultVal":"option1"
                },
