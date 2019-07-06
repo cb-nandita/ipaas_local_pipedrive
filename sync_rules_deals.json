@@ -272,7 +272,7 @@
                  "req":"true",
                  "type":"TOGGLE",
                  "id":"toggle1"
-              },
+              }
             ]
          }
       },
@@ -422,7 +422,7 @@
                  "req":"true",
                  "type":"TOGGLE",
                  "id":"toggle3"
-              },
+              }
             ]
          }
       }
