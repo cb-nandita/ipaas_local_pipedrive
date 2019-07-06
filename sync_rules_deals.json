@@ -27,12 +27,12 @@
                  	   {
                      	"value":"option1",
                         "disp":"Pipeline 1",
-                        "helptext":"Helptext1"
+                        "helptext":"Helptext1. <a href=\"\" target=\"blank\">Learn More</a>"
                  	   },
                      {
                      	"value":"option2",
                         "disp":"Pipeline 2",
-                        "helptext":"Helptext2"
+                        "helptext":"Helptext2.<a href=\"\" target=\"blank\">Learn More</a>"
                  	   }
                  	],
                   	"defaultVal":"option1"
