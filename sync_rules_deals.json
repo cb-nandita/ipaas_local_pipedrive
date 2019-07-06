@@ -1,6 +1,9 @@
 {
+   "heading":"Deal Settings For Subscriptions",
+   "contents":[
+    	"How would you like to handle deals in pipedrive when changes are made in subscriptions in Chargebee. <a href=\"\" target=\"blank\">Learn more</a>"
+    ],
    "cards" : [
-     
       {
          "card": {
             "heading": "headingggg",
