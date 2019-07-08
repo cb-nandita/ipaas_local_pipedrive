@@ -5,7 +5,7 @@
     ],
     "docUrl":"",
     "signupUrl":"",
-    "requestType":"oauthredirect”,
+   "requestType":"oauthredirect",
     "connect":{
 	"id":"credentials",
 	"display" : "Connect",
