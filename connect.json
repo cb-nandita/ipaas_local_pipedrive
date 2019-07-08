@@ -11,6 +11,7 @@
 	"display" : "Connect",
 	"icon" : "ARROW",
         "buttonLook":"FILLED",
-	"type" : "DIRECT_LINK"
+	"type" : "DIRECT_LINK",
+	"redirectUrl":"http://mannar-test.localcb.in:9090/pipedrive/connect?&client_id=833887fd6283fad0&state=mannar-test"
     }
 }
