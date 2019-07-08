@@ -12,6 +12,11 @@
 	"icon" : "ARROW",
         "buttonLook":"FILLED",
 	"type" : "DIRECT_LINK",
-	"url":"www.google.com"
+	"request":{
+     		"type":"ON_CLICK_DEFAULT_ACTION",
+     		"apiEndPoint":{
+            	"apiUrl":"www.google.com"
+         	}
+      	}
     }
 }
