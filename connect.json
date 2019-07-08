@@ -10,50 +10,7 @@
 	"display" : "Connect",
 	"icon" : "ARROW",
         "buttonLook":"FILLED",
-	"type" : "POP_UP",
-	"popUp":{  
-	   "inputFields":[  
-	      {  
-		 "dispName":"Base Url",
-		 "req":"true",
-		 "type":"TEXT",
-		 "id":"text",
-		 "placeholder":"EG: ABC.ACTIVEHOSTED.COM "
-	      },
-	      {  
-		 "dispName":"API Secret",
-		 "req":"true",
-		 "type":"PASSWORD",
-		 "id":"password",
-		 "placeholder":"eg: 1233asfsdf23434343434"
-	      },
-	      {  
-		 "req":"true",
-		 "type":"CHECKBOX",
-		 "id":"checkbox1",
-		 "desc":"I'm aware that Active Campaign may store your customer and subscription data. Please refer to ActiveCampaign's Terms of Service, Consent Policy, and Privacy Policy."
-	      }
-	   ],
-	   "message":{
-	      "message":"You can get your Base URL and API secret from ActiveCampaign by navigating to Settings > Developer"
-	   },
-	   "title":"Connect to ActiveCampaign",
-	   "submitButton":"Connect",
-	   "cancelButton":"Dismiss",
-	   "description":"Specify your ActiveCampaign Base URL and API secret",
-	   "advance":"true",
-	   "type":"INPUT",
-	   "apiEndPoint":{
-		"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json",
-		"type":"GET",
-	   	"headers":{
-			"Authorization":"sfsfsdffadssd",
-			"Elements-Formula-Instance-Id":"sfsfsdafsd"
-		},
-	   	"input":{
-			"id":"chargebee"
-		}
-	   }
-	}
+	"type" : "DIRECT_LINK",
+	"url":"www.google.com"
     }
 }
