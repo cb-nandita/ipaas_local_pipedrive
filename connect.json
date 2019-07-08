@@ -11,7 +11,6 @@
 	"icon" : "ARROW",
         "buttonLook":"FILLED",
 	"type" : "DIRECT_LINK",
-	"url":"www.google.com",
-	"newTab":"true"
+	"url":"www.google.com"
     }
 }
