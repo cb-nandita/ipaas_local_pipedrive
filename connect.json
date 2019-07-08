@@ -13,6 +13,7 @@
         "buttonLook":"FILLED",
 	"type" : "DIRECT_LINK",
 	"request":{
+		"id":"oauthconnect",
      		"type":"ON_CLICK_DEFAULT_ACTION",
      		"apiEndPoint":{
             	"apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/redirect.json",
