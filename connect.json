@@ -15,7 +15,15 @@
 	"request":{
      		"type":"ON_CLICK_DEFAULT_ACTION",
      		"apiEndPoint":{
-            	"apiUrl":"www.google.com"
+            	"apiUrl":"www.google.com",
+		"type":"GET",
+            	"headers":{
+               		"Authorization":"sfsfsdffadssd",
+               		"Elements-Formula-Instance-Id":"sfsfsdafsd"
+            	},
+            	"input":{
+               		"id":"chargebee"
+            	}
          	}
       	}
     }
