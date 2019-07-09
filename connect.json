@@ -14,18 +14,8 @@
 	"type" : "DIRECT_LINK",
 	"redirectUrl":"http://mannar-test.localcb.in:9090/pipedrive/connect?&client_id=833887fd6283fad0&state=mannar-test",
 	    "request":{
-         "type":"ON_CLICK_DEFAULT_ACTION",
-         "apiEndPoint":{
-            "apiUrl":"https://raw.githubusercontent.com/shamim-keyvalue/ipass_pipedrive/master/connect_resp.json",
-            "type":"GET",
-            "headers":{
-               "Authorization":"sfsfsdffadssd",
-               "Elements-Formula-Instance-Id":"sfsfsdafsd"
-            },
-            "input":{
-               "id":"chargebee"
-            }
-         }
+         "type":"ON_CLICK_DEFAULT_ACTION"
+        
       }
     }
 }
