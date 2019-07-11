@@ -31,7 +31,6 @@
          "card": {
             "type" : "DYNAMIC_INPUT",
             "heading":"Testing Dynamic DropDown",
-            "contents":"Choose a dropdown to load dynamically",
 		"params": [
 			{  
                  	"dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to",
