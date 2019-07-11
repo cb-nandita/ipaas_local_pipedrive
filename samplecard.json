@@ -27,6 +27,36 @@
          },
          "id" : "checkmapp"
       },
+	{
+         "card": {
+            "type" : "DYNAMIC_INPUT",
+            "heading":"Testing Dynamic DropDown",
+            "contents":"Choose a dropdown to load dynamically",
+		"params": [
+			{  
+                 	"dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to",
+                 	"req":"true",
+                 	"type":"DROPDOWN_DYNAMIC",
+                 	"id":"dropdown3",
+                 	"dropDownItemsList":[
+                 	   {
+                     	"value":"option1",
+                        "disp":"Pipeline 1",
+                        "helptext":"Helptext1. <a href=\"\" target=\"blank\">Learn More</a>"
+                 	   },
+                     	{
+                     	"value":"option2",
+                        "disp":"Pipeline 2",
+                        "helptext":"Helptext2.<a href=\"\" target=\"blank\">Learn More</a>"
+                 	   }
+                 	],
+                  	"defaultVal":"option1"
+               		}
+			]
+           
+         },
+         "id" : "checkdynamic"
+      },
       {
          "card": {
             "type" : "INPUT",
