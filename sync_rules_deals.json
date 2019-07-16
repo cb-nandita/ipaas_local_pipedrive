@@ -1,22 +1,29 @@
 {
-   "heading":"Deal Settings For Subscriptions",
-   "contents":[
-    	"How would you like to handle deals in pipedrive when changes are made in subscriptions in Chargebee. <a href=\"\" target=\"blank\">Learn more</a>"
-    ],
-    "message":{
-	      "message":"We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below",
-	      "icon":"INFO",
-	      "messageLook":"INFO",
-         "button": {
-            "display": "View Fields",
-            "icon": "ARROW",
-            "url":"https://www.chargebee.com/docs/index.html",
-            "id": "viewFields",
-            "type": "DIRECT_LINK",
-	         "newTab":"true"       
-          }
-	 },
    "cards" : [
+	   
+      {
+         "card": {
+		 "type" : "EMPTY_BACKGROUND",
+		 "heading":"Deal Settings For Subscriptions",
+		   "contents":[
+			"How would you like to handle deals in pipedrive when changes are made in subscriptions in Chargebee. <a href=\"\" target=\"blank\">Learn more</a>"
+		    ],
+		    "message":{
+			      "message":"We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below",
+			      "icon":"INFO",
+			      "messageLook":"INFO",
+			 "button": {
+			    "display": "View Fields",
+			    "icon": "ARROW",
+			    "url":"https://www.chargebee.com/docs/index.html",
+			    "id": "viewFields",
+			    "type": "DIRECT_LINK",
+				 "newTab":"true"       
+			  }
+			 }
+	   
+	   }
+      },
       {
          "card": {
             "heading": "headingggg",
