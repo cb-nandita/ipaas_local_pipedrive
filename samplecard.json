@@ -39,17 +39,17 @@
 			         "id":"dropdown1",
 				"isDynamic":"true",
 				"request":{
-				"type":"ON_CHANGE_FETCH_INPUT",
-				"apiEndPoint":{
-				"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/testreplace.json",
-				"type":"GET",
-				"headers":{
-					"Authorization":"sfsfsdffadssd",
-					"Elements-Formula-Instance-Id":"sfsfsdafsd"
-				},
-				"input":{
-					"id":"chargebee"
-					}
+					"type":"ON_CHANGE_FETCH_INPUT",
+					"apiEndPoint":{
+						"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/testreplace.json",
+						"type":"GET",
+						"headers":{
+							"Authorization":"sfsfsdffadssd",
+							"Elements-Formula-Instance-Id":"sfsfsdafsd"
+						},
+						"input":{
+							"id":"chargebee"
+						}
 					}
 				},
 			         "allowedValues":{
@@ -88,8 +88,7 @@
                         "disp":"Pipeline 2",
                         "helptext":"Helptext2.<a href=\"\" target=\"blank\">Learn More</a>"
                  	   }
-                 	],
-                  	"defaultVal":"option1"
+                 	]
                		}
 			]
            
