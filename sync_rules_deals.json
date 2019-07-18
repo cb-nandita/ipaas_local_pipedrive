@@ -294,6 +294,28 @@
                  "req":"true",
                  "type":"TOGGLE",
                  "id":"toggle1"
+              },
+               {       
+               "dispName":"Toggle to fetch card",
+                 "desc":"Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value.",
+                 "req":"true",
+                 "type":"TOGGLE",
+                 "id":"toggle4",
+		       "isDynamic":"true",
+			"request":{
+			"type":"ON_CHANGE_FETCH_INPUT",
+			"apiEndPoint":{
+			"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/testreplace.json",
+			"type":"GET",
+			"headers":{
+				"Authorization":"sfsfsdffadssd",
+				"Elements-Formula-Instance-Id":"sfsfsdafsd"
+			},
+			"input":{
+				"id":"chargebee"
+				}
+				}
+			}
               }
             ]
          },
