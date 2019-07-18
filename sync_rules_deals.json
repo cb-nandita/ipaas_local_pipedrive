@@ -27,7 +27,7 @@
       {
          "card": {
             "heading": "headingggg",
-            "type" : "INPUT",
+            "type" : "DYNAMIC_INPUT",
             "params": [
                {  
                  "dispName":"... subscription is <b>created</b>",
