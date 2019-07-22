@@ -287,7 +287,7 @@
                  "id":"toggle1"
               },
                {       
-               "dispName":"Toggle to fetch card",
+               "dispName":"Toggle to fetch card - 1",
                  "desc":"Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value.",
                  "req":"true",
                  "type":"TOGGLE",
