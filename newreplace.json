@@ -10,6 +10,21 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown2",
+                   "isDynamic":"true",
+				"request":{
+					"type":"ON_CHANGE_FETCH_INPUT",
+					"apiEndPoint":{
+						"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/newreplace.json",
+						"type":"GET",
+						"headers":{
+							"Authorization":"sfsfsdffadssd",
+							"Elements-Formula-Instance-Id":"sfsfsdafsd"
+						},
+						"input":{
+							"id":"chargebee"
+						}
+					}
+				},
                  "allowedValues":{
                     "option1":"New - Create a deal",
                     "option2":"New - Update a deal",
@@ -281,7 +296,7 @@
                   "request":{
                   "type":"ON_CHANGE_FETCH_INPUT",
                   "apiEndPoint":{
-                  "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/testreplace.json",
+                  "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/dynamicsample.json",
                   "type":"GET",
                   "headers":{
                     "Authorization":"sfsfsdffadssd",
