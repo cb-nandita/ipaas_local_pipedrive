@@ -14,7 +14,7 @@
 				"request":{
 					"type":"ON_CHANGE_FETCH_INPUT",
 					"apiEndPoint":{
-						"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/newreplace.json",
+						"apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/dynamicsample.json",
 						"type":"GET",
 						"headers":{
 							"Authorization":"sfsfsdffadssd",
