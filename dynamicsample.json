@@ -105,7 +105,7 @@
                  "dispName":"<b>Choose the options to be selected when the subscription items are updated</b>",
                  "type":"TEXTLABEL",
                  "id":"label1",
-		 "desc":"Muted description"
+		 "desc":"<p style=\"padding-left: 20px;\">Muted description"
                },
                {  
                  "dispName":"... subscription items are <b>updated</b>",
