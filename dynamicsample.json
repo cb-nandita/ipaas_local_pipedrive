@@ -95,7 +95,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown4",
-		 "desc":"Muted description",
+		 "desc":"<p style=\"padding-left: 10px;\">Muted description",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
