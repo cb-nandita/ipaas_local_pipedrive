@@ -101,6 +101,12 @@
                  },
                   "defaultVal":"option1"
                },
+		{  
+                 "dispName":"<b>Choose the options to be selected when the subscription items are updated</b>",
+                 "type":"TEXTLABEL",
+                 "id":"label1",
+		 "desc":"Muted description"
+               },
                {  
                  "dispName":"... subscription items are <b>updated</b>",
                  "req":"true",
