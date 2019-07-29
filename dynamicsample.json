@@ -91,10 +91,11 @@
                   	"defaultVal":"option1"
                },
                {  
-                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 20px;\"> - Choose the stage you'd like to add this deal to",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown4",
+		 "desc":"Muted description",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
