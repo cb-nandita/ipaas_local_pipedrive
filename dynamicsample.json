@@ -134,8 +134,9 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":"... subscription is deleted",
+                 "dispName":"<b>... subscription is deleted</b>",
                  "req":"true",
+		 "desc":"Muted description",
                  "type":"DROPDOWN",
                  "id":"dropdown8",
                  "allowedValues":{
@@ -146,7 +147,7 @@
                   "defaultVal":"option3"
                },
                {  
-                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the pipeline you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\">- Choose the pipeline you'd like to add this deal to",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown9",
@@ -156,7 +157,7 @@
                   "defaultVal":"option1"
                },
                {  
-                 "dispName":"<p style=\"padding-left: 10px;\"> - Choose the stage you'd like to add this deal to",
+                 "dispName":"<p style=\"padding-left: 10px;\">- Choose the stage you'd like to add this deal to",
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown10",
