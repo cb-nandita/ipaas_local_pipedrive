@@ -124,6 +124,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown6",
+		 "isMuted":"true",
                  "allowedValues":{
                     "option1":"Pipeline 1"
                  },
@@ -134,6 +135,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown7",
+		 "isMuted":"true",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
@@ -157,6 +159,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown9",
+		 "isMuted":"true",
                  "allowedValues":{
                     "option1":"Pipeline 1"
                  },
@@ -167,6 +170,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown10",
+		 "isMuted":"true",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
