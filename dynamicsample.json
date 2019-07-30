@@ -105,6 +105,7 @@
                  "dispName":"Choose the options to be selected when the subscription items are updated",
                  "type":"TEXTLABEL",
                  "id":"label1",
+		 "isBold":"true",
 		 "desc":"Muted description"
                },
                {  
