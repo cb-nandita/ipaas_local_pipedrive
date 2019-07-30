@@ -106,7 +106,8 @@
                  "type":"TEXTLABEL",
                  "id":"label1",
 		 "isBold":"true",
-		 "desc":"Muted description"
+		 "desc":"Muted description <a href=\"\" target=\"blank\">Learn More</a>"
+		
                },
                {  
                  "dispName":"... subscription items are <b>updated</b>",
