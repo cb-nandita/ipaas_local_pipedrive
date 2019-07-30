@@ -95,14 +95,14 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown4",
-		 "desc":"<p style=\"padding-left: 10px;\">Muted description",
+		 "desc":"<p style=\"padding-left: 20px;\">Muted description",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
                   "defaultVal":"option1"
                },
 		{  
-                 "dispName":"<b>Choose the options to be selected when the subscription items are updated</b>",
+                 "dispName":"Choose the options to be selected when the subscription items are updated",
                  "type":"TEXTLABEL",
                  "id":"label1",
 		 "desc":"<p style=\"padding-left: 20px;\">Muted description"
