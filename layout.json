@@ -30,6 +30,10 @@
                     "Elements-Formula-Instance-Id": "388733"
             },
             "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/sync_rules_deals.json"
+         },
+         "backStepApiEndPoint": {
+            "type":"GET",
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/dynamicsample.json"
          }
       },
       {
