@@ -19,6 +19,10 @@
                     "Elements-Formula-Instance-Id": "388728"
             },
             "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/dynamicsample.json"
+         },
+         "backStepApiEndPoint": {
+            "type":"GET",
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json"
          }
       },
       {
@@ -33,7 +37,7 @@
          },
          "backStepApiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/dynamicsample.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json"
          }
       },
       {
