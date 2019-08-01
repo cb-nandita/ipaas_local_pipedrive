@@ -46,6 +46,8 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown2",
+		 "desc":"Description",
+		 "subCaption":"Italic caption",
                  "isDynamic":"true",
 				"request":{
 					"type":"ON_CHANGE_FETCH_INPUT",
@@ -108,6 +110,7 @@
                  "type":"DROPDOWN",
                  "id":"dropdown4",
 		 "desc":"<p style=\"padding-left: 20px;\">Muted description",
+		 "subCaption":"Italic caption",
                  "allowedValues":{
                     "option1":"Stage 1"
                  },
@@ -118,8 +121,8 @@
                  "type":"TEXTLABEL",
                  "id":"label1",
 		 "isBold":"true",
-		 "desc":"Muted description <a href=\"\" target=\"blank\">Learn More</a>"
-		
+		 "desc":"Muted description <a href=\"\" target=\"blank\">Learn More</a>",
+		 "subCaption":"Italic Caption"
                },
                {  
                  "dispName":"... subscription items are <b>updated</b>",
@@ -341,6 +344,8 @@
                  "desc":"Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value.",
                  "req":"true",
                  "type":"TOGGLE",
+		 "desc":"Toggle Description",
+		 "subCaption":"Italic Subcaption For Toggle",
                  "id":"toggle4",
 		       "isDynamic":"true",
 			"request":{
