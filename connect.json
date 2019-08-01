@@ -15,9 +15,9 @@
 	"redirectUrl":"http://mannar-test.localcb.in:9090/pipedrive/connect?&client_id=833887fd6283fad0&state=mannar-test",
 	    "request":{
          "type":"ON_CLICK_DEFAULT_ACTION"
-        
-      },
-     "message":{
+        }
+    },
+	"message":{
 			      "message":"We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below",
 			      "icon":"INFO",
 			      "messageLook":"INFO",
@@ -31,5 +31,4 @@
 		            "newTab":"true"       
 			  }
 	}
-    }
 }
