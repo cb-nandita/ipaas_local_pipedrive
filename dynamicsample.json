@@ -23,7 +23,7 @@
 		    "message":{
 			      "message":"We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below",
 			      "icon":"INFO",
-			      "messageLook":"INFO"
+			      "messageLook":"INFO",
 			 "button": {
 			    "display": "View Fields",
 			    "icon": "ARROW",
