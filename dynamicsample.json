@@ -8,8 +8,7 @@
 			 "dispName":"All deals will be created/updated in Hubspot Sales pipeline",
 			 "type":"TEXTLABEL",
 			 "id":"label1",
-			 "icon":"INFO",
-			 "textColour":"INFO"
+			 "icon":"INFO"
                		}
 	   
 	   }
