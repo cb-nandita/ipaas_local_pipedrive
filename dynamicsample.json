@@ -4,12 +4,13 @@
       {
          "card": {
 		 "type" : "EMPTY_BACKGROUND",
-		    "message":{
-			      "message":"All deals will be created or updated in Hubspot Sales pipeline",
-			      "icon":"INFO",
-			      "messageLook":"INFO",
-			    "boxNeeded":"false"
-			 }
+		    "label":{  
+			 "dispName":"All deals will be created/updated in Hubspot Sales pipeline",
+			 "type":"TEXTLABEL",
+			 "id":"label1",
+			 "icon":"INFO",
+			 "textColour":"INFO"
+               		}
 	   
 	   }
       },
