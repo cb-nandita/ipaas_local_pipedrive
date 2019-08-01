@@ -45,7 +45,7 @@
                  "dispName":"... subscription is <b>created</b>",
                  "req":"true",
                  "type":"DROPDOWN",
-                 "id":"dropdown2"
+                 "id":"dropdown2",
 		 "subCaption":"Italic caption",
                  "isDynamic":"true",
 				"request":{
