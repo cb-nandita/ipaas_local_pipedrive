@@ -46,7 +46,7 @@
                  "req":"true",
                  "type":"DROPDOWN",
                  "id":"dropdown2",
-		 "subCaption":"Italic caption",
+		 "subCaption":"<br>Italic caption",
                  "isDynamic":"true",
 				"request":{
 					"type":"ON_CHANGE_FETCH_INPUT",
