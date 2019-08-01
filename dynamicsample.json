@@ -344,7 +344,6 @@
                  "desc":"Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value.",
                  "req":"true",
                  "type":"TOGGLE",
-		 "desc":"Toggle Description",
 		 "subCaption":"Italic Subcaption For Toggle",
                  "id":"toggle4",
 		       "isDynamic":"true",
