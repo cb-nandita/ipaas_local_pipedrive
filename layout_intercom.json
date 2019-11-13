@@ -1,0 +1,67 @@
+{
+    "logo":"/third_party/cn-intercom.png",
+    "integDispName":"Intercom",
+    "integType":"Object",
+    "subStepList":[
+        {
+            "stepName":"Connect",
+            "stepId":"connect",
+            "apiEndPoint": {
+                "type":"GET",
+                "apiUrl":"IntercomConnectJSONProvider"
+            }
+        },
+        {
+            "stepName":"Configure Sync Preferences ",
+            "stepId":"set_preference",
+            "apiEndPoint": {
+                "type":"GET",
+                "apiUrl":"IntercomConfigurePreferenceJSONProvider"
+            },
+            "editConfig":{
+                "title":"Manage how Chargebee syncs data with Intercom",
+                "display" : "Manage sync rules",
+                "apiEndPoint": {
+                    "type":"GET",
+                    "apiUrl":"IntercomEditPreferenceJSONProvider"
+                }
+            },
+            "backStepApiEndPoint": {
+                "type":"GET",
+                "apiUrl":"BackConfigurePreferenceJSONProvider"
+            }
+        },
+        {
+            "stepName":"Data Validation",
+            "stepId":"VALIDATION",
+            "apiEndPoint": {
+                "type":"ValidationObject",
+                "apiUrl":"IntercomValidationStepJSONProvider"
+            },
+            "backStepApiEndPoint": {
+                "type":"ValidationObject",
+                "apiUrl":"BackValidationStep"
+            }
+        },
+        {
+            "stepName":"Run Initial Sync",
+            "stepId":"sync",
+            "apiEndPoint": {
+                "type":"GET",
+                "apiUrl":"InitialSync"
+            }
+        },
+        {
+            "stepName":"Final step",
+            "stepId":"completed",
+            "apiEndPoint": {
+                "type":"GET",
+                "apiUrl":"IntercomCompleteJSONProvider"
+            },
+            "fullSyncApiEndPoint": {
+                "type":"GET",
+                "apiUrl":"https://raw.githubusercontent.com/cb-Vinothini/ipaas_local/master/connect_resp.json"
+            }
+        }
+    ]
+}
