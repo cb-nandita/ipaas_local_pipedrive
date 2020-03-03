@@ -2,6 +2,14 @@
    "logo":"/third_party/cn-xero.png",
    "integDispName":"Pipedrive",
    "subStepList":[
+      {	
+         "stepName":"Connect",	
+         "stepId":"connect",	
+         "apiEndPoint": {	
+            "type":"GET",	
+            "apiUrl":"https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/connect.json"	
+         }	
+      },
       {
          "stepName":"Sync Rules for Contacts",
          "stepId":"step_1",
