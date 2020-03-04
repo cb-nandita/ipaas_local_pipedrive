@@ -99,7 +99,7 @@
             ],
             "id": "subCreatedStage",
             "req": "false",
-            "type": "DROPDOWN_DYNAMIC"
+            "type": "DROPDOWN"
           },
           {
             "defaultVal": "subUpdatedoption3",
