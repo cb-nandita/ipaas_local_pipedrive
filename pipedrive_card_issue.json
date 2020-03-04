@@ -48,6 +48,10 @@
               {
                 "disp": "Pipeline",
                 "value": 1
+              },
+              {
+                "disp": "Pipeline2",
+                "value": 2
               }
             ],
             "id": "subCreatedPipeline",
