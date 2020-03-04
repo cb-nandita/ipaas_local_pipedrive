@@ -76,7 +76,9 @@
             "dropDownItemsList": [
               {
                 "disp": "Lead In",
-                "value": 1
+                "value": 1,
+                "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='https://www.chargebee.com/docs/pipedrive-config.html#update-deal' target='blank'>Learn More</a>",
+
               },
               {
                 "disp": "Contact Made",
