@@ -116,20 +116,6 @@
             "id": "subUpdated",
             "isDynamic": "true",
             "req": "false",
-            "request": {
-              "apiEndPoint": {
-                "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
-                "headers": {
-                  "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
-                  "Elements-Formula-Instance-Id": 419652
-                },
-                "input": {
-                  "card": "subscription"
-                },
-                "type": "GET"
-              },
-              "type": "ON_CHANGE_FETCH_INPUT"
-            },
             "type": "DROPDOWN_DYNAMIC"
           },
           {
