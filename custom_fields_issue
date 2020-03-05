@@ -1,0 +1,206 @@
+[
+  {
+    "id": "mainCard",
+    "card": {
+      "type": "EMPTY_BACKGROUND",
+      "heading": "Sync Fields from Chargebee to Pipedrive",
+      "contents": [
+        "Set rules to sync customer and subscription fields from Chargebee to Pipedrive."
+      ],
+      "message": {
+        "message": "We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below. The subscription fields will be synced as attributes to person in Pipedrive.",
+        "messageLook": "INFO",
+        "button": {
+          "display": "View Fields",
+          "icon": "ARROW",
+          "url": " https://www.chargebee.com/docs/pipedrive-field-map.html",
+          "id": "viewFields",
+          "type": "DIRECT_LINK",
+          "newTab": "true"
+        }
+      }
+    },
+    "isCardDone": "true"
+  },
+  {
+    "card": {
+      "type": "TOGGLE_HIDE_INPUT",
+      "params": [
+        {
+          "dispName": "Sync more fields from Chargebee to Pipedrive",
+          "req": "true",
+          "type": "TOGGLE",
+          "id": "syncMoreFields",
+          "defaultVal": "false"
+        },
+        {
+          "dispName": "Subscription fields",
+          "type": "MODELBOX_INPUT_FIELDS",
+          "id": "subscriptionFields",
+          "inputFields": [
+            {
+              "type": "SEARCH_CHECK_BOX",
+              "id": "subscriptionFieldsSelected",
+              "checkboxes": [
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_ID",
+                  "desc": "Id",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Currency",
+                  "desc": "Currency",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Plan_Name",
+                  "desc": "Plan Name",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Status",
+                  "desc": "Status",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Created_At",
+                  "desc": "Created At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Trial_start",
+                  "desc": "Trial Start",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Trial_end",
+                  "desc": "Trial End",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Started_At",
+                  "desc": "Started At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Activated_At",
+                  "desc": "Activated At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Pause_At",
+                  "desc": "Pause At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Resume_At",
+                  "desc": "Resume At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Next_Billing_At",
+                  "desc": "Next Billing At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Start_At",
+                  "desc": "Start At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Cancelled_At",
+                  "desc": "Cancelled At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Cancel_Reason",
+                  "desc": "Cancel Reason",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Current_term_start",
+                  "desc": "Current Term Start",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Current_term_end",
+                  "desc": "Current Term End",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_MRR",
+                  "desc": "MRR",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_CMRR",
+                  "desc": "CMRR",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Gift_Subscription",
+                  "desc": "Is Gift",
+                  "defaultVal": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dispName": "Customer fields",
+          "type": "MODELBOX_INPUT_FIELDS",
+          "id": "customerFields",
+          "inputFields": [
+            {
+              "type": "SEARCH_CHECK_BOX",
+              "description": "Fields",
+              "id": "customerFieldsSelected",
+              "checkboxes": [
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Customer_Auto_Collection",
+                  "desc": "Auto Collection",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Customer_Locale",
+                  "desc": "Customer Locale",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Customer_Total_Due_Amount",
+                  "desc": "Total Due Amount",
+                  "defaultVal": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "id": "check4",
+    "isCardDone": "true"
+  }
+]
