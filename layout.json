@@ -18,7 +18,7 @@
             "headers": {
                     "Elements-Formula-Instance-Id": "388728"
             },
-            "apiUrl":"https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/pipedrive_card_issue.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/custom_fields_issue.json"
          },
          "backStepApiEndPoint": {
             "type":"GET",
