@@ -172,7 +172,7 @@
           "dispName": "Customer fields",
           "type": "MODELBOX_INPUT_FIELDS",
           "id": "customerFields",
-          "description" : "abcdjdjd"
+          "description" : "abcdjdjd",
           "inputFields": [
             {
               "type": "SEARCH_CHECK_BOX",
