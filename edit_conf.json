@@ -1,0 +1,1025 @@
+{
+  
+"cards":[
+  {
+    "card": {
+      "type": "EMPTY_BACKGROUND",
+      "heading": "Sync Rules for Contacts",
+      "contents": [
+        "Configure how customer and subscription data is synced from Chargebee to Pipedrive. Set rules to manage 'People' and 'Organizations' in Pipedrive from Chargebee.<a href=\"https://www.chargebee.com/docs/pipedrive-config.html#contacts\" target=\"blank\">Learn More</a>"
+      ]
+    }
+  },
+  {
+    "card": {
+      "type": "INPUT",
+      "params": [
+        {
+          "dispName": "Choose customers you'd like to sync",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "chooseCustomersToSync",
+          "dropDownItemsList": [
+            {
+              "value": "option1",
+              "disp": "Sync All Customers"
+            },
+            {
+              "value": "option2",
+              "disp": "Sync Only Customers with Subscriptions"
+            }
+          ],
+          "defaultVal": "option1"
+        }
+      ]
+    },
+    "id": "check1"
+  },
+  {
+    "card": {
+      "type": "DYNAMIC_INPUT",
+      "params": [
+        {
+          "dispName": "Allow Chargebee to create 'People' in Pipedrive",
+          "desc": "By default, existing people, if any, will be updated with the changes made in Chargebee. Disable if you dont want chargebee to create 'People' in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#people\" target=\"blank\">Learn More</a>",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "createPeopleInPipedrive",
+          "dropDownItemsList": [
+            {
+              "value": "true",
+              "disp": "Create person"
+            },
+            {
+              "value": "false",
+              "disp": "Do nothing"
+            }
+          ],
+          "defaultVal": "true",
+          "isSeperator": true
+        },
+        {
+          "dispName": "Allow Chargebee to manage 'Organization' in Pipedrive",
+          "desc": "By default, Chargebee customers will be synced as 'People' in Pipedrive. Enable if you want to allow Chargebee to add people to 'Organization', and create and update Organizations in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#org\" target=\"blank\">Learn More</a>",
+          "type": "TOGGLE",
+          "id": "manageOrganizationInPipedrive",
+          "defaultVal": false,
+          "isSeperator": true,
+          "isDynamic": "true",
+          "isDisabled": true,
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getOrganizationSettings",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 400183
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          }
+        },
+        {
+          "dispName": "When a customer is deleted in Chargebee",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "customerDeletedInCB",
+          "dropDownItemsList": [
+            {
+              "value": "option1",
+              "disp": "Do Nothing"
+            },
+            {
+              "value": "option2",
+              "disp": "Mark 'Person'as 'Deleted'"
+            }
+          ],
+          "defaultVal": "option2"
+        }
+      ]
+    },
+    "id": "check2"
+  },
+  {
+    "card": {
+      "type": "EMPTY_BACKGROUND",
+      "heading": "Deal Settings For Subscriptions",
+      "contents": [
+        "How would you like to handle deals in pipedrive when changes are made in subscriptions in Chargebee. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#deals\" target=\"blank\">Learn More</a>"
+      ]
+    },
+    "isCardDone": "true"
+  },
+  {
+    "card": {
+      "heading": "Choose how you'd like to handle deals in Pipedrive when",
+      "type": "DYNAMIC_INPUT",
+      "params": [
+        {
+          "dispName": "... subscription is <b>created</b>",
+          "req": "false",
+          "id": "subCreated",
+          "type": "DROPDOWN_DYNAMIC",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Create a deal",
+              "value": "subCreatedoption1"
+            },
+            {
+              "disp": "Update existing deal",
+              "value": "subCreatedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subCreatedoption3"
+            }
+          ],
+          "defaultVal": "subCreatedoption1"
+        },
+        {
+          "dispName": "<p style='padding-left: 10px;'>- Choose the pipeline you'd like to add this deal to </p>",
+          "req": "false",
+          "id": "subCreatedPipeline",
+          "type": "DROPDOWN_DYNAMIC",
+          "dropDownItemsList": [
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 1,
+              "disp": "Pipeline"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 2,
+              "disp": "New Sales"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 6,
+              "disp": "Upgrades"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 7,
+              "disp": "Upgrades"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 9,
+              "disp": "Invoice"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 8,
+              "disp": "Upgrades"
+            },
+            {
+              "value": "doNothing",
+              "disp": "Do Nothing"
+            }
+          ],
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription",
+                "selectedPipeline": "subCreatedPipeline"
+              }
+            }
+          },
+          "defaultVal": "1"
+        },
+        {
+          "dispName": "<p style='padding-left: 10px;'>- Choose the stage you'd like to add this deal to",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subCreatedStage",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "id": "chargebee"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 1,
+              "disp": "Lead In"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 2,
+              "disp": "Contact Made"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 3,
+              "disp": "Prospect Qualified"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 4,
+              "disp": "Needs Defined"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 5,
+              "disp": "Proposal Made"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 6,
+              "disp": "Negotiations Started"
+            }
+          ],
+          "defaultVal": "1"
+        },
+        {
+          "dispName": "... subscription items are <b>updated</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subUpdated",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "subUpdatedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subUpdatedoption3"
+            }
+          ],
+          "defaultVal": "subUpdatedoption3"
+        },
+        {
+          "dispName": "... subscription is <b>deleted</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subDeleted",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "subDeletedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subDeletedoption3"
+            }
+          ],
+          "defaultVal": "subDeletedoption3"
+        },
+        {
+          "dispName": "... subscription is <b>paused</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subPaused",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "subPausedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subPausedoption3"
+            }
+          ],
+          "defaultVal": "subPausedoption3"
+        },
+        {
+          "dispName": "... subscription is <b>resumed</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subResumed",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "subResumedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subResumedoption3"
+            }
+          ],
+          "defaultVal": "subResumedoption3"
+        },
+        {
+          "dispName": "... subscription is <b>cancelled</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subCancelled",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "subCancelledoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subCancelledoption3"
+            }
+          ],
+          "defaultVal": "subCancelledoption3"
+        },
+        {
+          "dispName": "... subscription is <b>reactivated</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "subReactivated",
+          "isDynamic": "true",
+          "isSeperator": true,
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "subscription"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Create a deal",
+              "value": "subReactivatedoption1"
+            },
+            {
+              "disp": "Update existing deal",
+              "value": "subReactivatedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "subReactivatedoption3"
+            }
+          ],
+          "defaultVal": "subReactivatedoption3"
+        },
+        {
+          "dispName": "Choose how you'd like to <b>update deal value</b> in Pipedrive",
+          "req": "false",
+          "type": "DROPDOWN",
+          "id": "howToUpdateDealValue",
+          "allowedValues": {
+            "howToUpdateDealValueoption1": "Use Recurring Items Total",
+            "howToUpdateDealValueoption2": "Use invoice amount",
+            "howToUpdateDealValueoption4": "Don't Update Deal Value"
+          },
+          "defaultVal": "howToUpdateDealValueoption2"
+        },
+        {
+          "dispName": "Allow Chargebee to add notes to deals",
+          "desc": "Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value.<a href=\"https://www.chargebee.com/docs/pipedrive-config.html#deal-notes\" target=\"blank\">Learn more</a>",
+          "req": "false",
+          "type": "TOGGLE",
+          "id": "addNotesSubscription",
+          "subCaption": "Example: \"Deal worth USD 99 created due to subscription (#12dfgh) creation in Chargebee\"",
+          "defaultVal": false
+        }
+      ]
+    },
+    "id": "testdynamic",
+    "isCardDone": "true"
+  },
+  {
+    "card": {
+      "type": "EMPTY_BACKGROUND",
+      "heading": "Deal Settings For Customer One-Time Invoices",
+      "contents": [
+        "Configure how you'd like to handle when one-time invoices are created in Chargebee. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#deals\" target=\"blank\">Learn More</a>"
+      ]
+    },
+    "isCardDone": "true"
+  },
+  {
+    "card": {
+      "heading": "Choose how you'd like to handle deals in Pipedrive when",
+      "type": "DYNAMIC_INPUT",
+      "params": [
+        {
+          "dispName": "... invoice is <b>created</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "invCreated",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "invoice"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Create a deal",
+              "value": "invCreatedoption1"
+            },
+            {
+              "disp": "Update existing deal",
+              "value": "invCreatedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target=\"blank\">Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "invCreatedoption3"
+            }
+          ],
+          "defaultVal": "invCreatedoption1"
+        },
+        {
+          "dispName": "<p style='padding-left: 10px;'>- Choose the pipeline you'd like to add this deal to",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "invCreatedPipeline",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "id": "chargebee",
+                "card": "invoice",
+                "selectedPipeline": "invCreatedPipeline"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 1,
+              "disp": "Pipeline"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 2,
+              "disp": "New Sales"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 6,
+              "disp": "Upgrades"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 7,
+              "disp": "Upgrades"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 9,
+              "disp": "Invoice"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 8,
+              "disp": "Upgrades"
+            },
+            {
+              "value": "doNothing",
+              "disp": "Do Nothing"
+            }
+          ],
+          "defaultVal": "1"
+        },
+        {
+          "id": "invCreatedStage",
+          "dispName": "<p style='padding-left: 10px;'>- Choose the stage you'd like to add this deal to",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "id": "chargebee"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 1,
+              "disp": "Lead In"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 2,
+              "disp": "Contact Made"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 3,
+              "disp": "Prospect Qualified"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 4,
+              "disp": "Needs Defined"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 5,
+              "disp": "Proposal Made"
+            },
+            {
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href='' target='blank'>Learn More</a>",
+              "value": 6,
+              "disp": "Negotiations Started"
+            }
+          ],
+          "defaultVal": "1"
+        },
+        {
+          "dispName": "... invoice is <b>deleted</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "invDeleted",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "invoice"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "invDeletedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target='blank'>Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "invDeletedoption3"
+            }
+          ],
+          "defaultVal": "invDeletedoption3"
+        },
+        {
+          "dispName": "... invoice is <b>paid</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "invPaid",
+          "isDynamic": "true",
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "invoice"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "invPaidoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target='blank'>Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "invPaidoption3"
+            }
+          ],
+          "defaultVal": "invPaidoption3"
+        },
+        {
+          "dispName": "... invoice is <b>voided</b>",
+          "req": "false",
+          "type": "DROPDOWN_DYNAMIC",
+          "id": "invVoided",
+          "isDynamic": "true",
+          "isSeperator": true,
+          "request": {
+            "type": "ON_CHANGE_FETCH_INPUT",
+            "apiEndPoint": {
+              "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/getStages",
+              "type": "GET",
+              "headers": {
+                "Authorization": "User XNzP5miZ8LjANZarWA0np2LmNeRkUanHScUEQmQHwDs=, Organization c9584f9cc4a4c8391568438a9a3041a2",
+                "Elements-Formula-Instance-Id": 419746
+              },
+              "input": {
+                "card": "invoice"
+              }
+            }
+          },
+          "dropDownItemsList": [
+            {
+              "disp": "Update existing deal",
+              "value": "invVoidedoption2",
+              "helptext": "Last Created Open deal will be updated in Pipedrive. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#update-deal\" target='blank'>Learn More</a>"
+            },
+            {
+              "disp": "Do Nothing",
+              "value": "invVoidedoption3"
+            }
+          ],
+          "defaultVal": "invVoidedoption3"
+        },
+        {
+          "dispName": "Update deal value with invoice amount",
+          "desc": "Disable if you don't want Chargebee to deal value in Pipedrive with invoice amount.",
+          "req": "false",
+          "type": "TOGGLE",
+          "id": "updateDealValueWithInvoice",
+          "defaultVal": false
+        },
+        {
+          "dispName": "Allow Chargebee to add notes to deals",
+          "desc": "Enable if you want Chargebee to add notes to deals when changes are made to deal stage or deal value. <a href=\"https://www.chargebee.com/docs/pipedrive-config.html#deal-notes\" target=\"blank\">Learn more</a>",
+          "req": "false",
+          "type": "TOGGLE",
+          "id": "addNotesInvoice",
+          "subCaption": "Example: \"Deal worth USD 99 created due to invoice (#INV001) creation in Chargebee\"",
+          "defaultVal": false
+        }
+      ]
+    },
+    "id": "testdynamic2",
+    "isCardDone": "true"
+  },
+  {
+    "id": "mainCard",
+    "isCardDone": "true",
+    "card": {
+      "type": "EMPTY_BACKGROUND",
+      "heading": "Sync fields from Chargebee to Pipedrive",
+      "contents": [
+        "Set Rules to sync customer and subscription fields from Chargebee to Pipedrive."
+      ],
+      "message": {
+        "message": "We will sync 10 fields from Chargebee to Pipedrive. You can sync more fields by enabling the configuration below. The subscription fields will be synced as attributes to person in Pipedrive.",
+        "messageLook": "INFO",
+        "button": {
+          "display": "View Fields",
+          "icon": "ARROW",
+          "url": "https://www.chargebee.com/docs/pipedrive-field-map.html",
+          "id": "viewFields",
+          "type": "DIRECT_LINK",
+          "newTab": "true"
+        }
+      }
+    }
+  },
+  {
+    "id": "check4",
+    "isCardDone": "true",
+    "card": {
+      "type": "TOGGLE_HIDE_INPUT",
+      "params": [
+        {
+          "dispName": "Sync more fields from Chargebee to Pipedrive",
+          "req": "true",
+          "type": "TOGGLE",
+          "id": "syncMoreFields",
+          "defaultVal": "false"
+        },
+        {
+          "dispName": "Subscription fields",
+          "type": "MODELBOX_INPUT_FIELDS",
+          "id": "subscriptionFields",
+          "inputFields": [
+            {
+              "type": "SEARCH_CHECK_BOX",
+              "id": "subscriptionFieldsSelected",
+              "checkboxes": [
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_ID",
+                  "desc": "Id",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Currency",
+                  "desc": "Currency",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Plan_Name",
+                  "desc": "Plan Name",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Status",
+                  "desc": "Status",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Created_At",
+                  "desc": "Created At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Trial_start",
+                  "desc": "Trial Start",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Trial_end",
+                  "desc": "Trial End",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Started_At",
+                  "desc": "Started At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Activated_At",
+                  "desc": "Activated At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Pause_At",
+                  "desc": "Pause At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Resume_At",
+                  "desc": "Resume At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Next_Billing_At",
+                  "desc": "Next Billing At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Start_At",
+                  "desc": "Start At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Cancelled_At",
+                  "desc": "Cancelled At",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Cancel_Reason",
+                  "desc": "Cancel Reason",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Current_term_start",
+                  "desc": "Current Term Start",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_Current_term_end",
+                  "desc": "Current Term End",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Subscription_MRR",
+                  "desc": "MRR",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "cf_orange_subscription",
+                  "desc": "orange_subscription",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "cf_fxdgfsg",
+                  "desc": "fxdgfsg",
+                  "defaultVal": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dispName": "Customer fields",
+          "type": "MODELBOX_INPUT_FIELDS",
+          "id": "customerFields",
+          "inputFields": [
+            {
+              "type": "SEARCH_CHECK_BOX",
+              "id": "customerFieldsSelected",
+              "checkboxes": [
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Customer_Auto Collection",
+                  "desc": "Auto Collection",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "CB_Customer_Locale",
+                  "desc": "Customer Locale",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "cf_yellow_page",
+                  "desc": "Yellow_Page",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "cf_purple_sub",
+                  "desc": "purple_sub",
+                  "defaultVal": "off"
+                },
+                {
+                  "type": "CHECKBOX",
+                  "id": "cf_grdgdr",
+                  "desc": "grdgdr",
+                  "defaultVal": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+],
+"dismissText":"Dismiss",
+"Save":
+{
+  "buttonLook": "FILLED",
+  "display": "Save",
+  "icon": "ARROW",
+  "id": "save",
+  "request": {
+    "apiEndPoint": {
+      "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/saveSyncRules",
+      "headers": {
+        "Elements-Formula-Instance-Id": 428127
+      },
+      "input": {
+        "apiKey": "test_TSqLzZzcuJHololXX8W7GggFRkOAfYF98",
+        "id": "chargebee",
+        "integrationName": "pipedrive",
+        "siteDomain": "predev3.in",
+        "siteName": "aparna11-test"
+      },
+      "type": "POST"
+    },
+    "type": "ON_CLICK_SEND_INPUT"
+  },
+  "type": "DIRECT_LINK"
+}
+}
