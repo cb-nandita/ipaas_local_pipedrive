@@ -72,7 +72,7 @@
          "stepId":"completed",
          "apiEndPoint": {
             "type":"GET",
-            "apiUrl":"https://raw.githubusercontent.com/cb-karthi/ipaas_local_pipedrive/master/connect_resp.json"
+            "apiUrl":"https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/complteLayout.json"
          }
       }
    ]
