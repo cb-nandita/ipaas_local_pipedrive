@@ -1,0 +1,80 @@
+{
+  "icon": "/third_party/cn-xero.png",
+  "overview": [
+    {
+      "card": {
+        "buttons": [
+          {
+            "buttonLook": "EMPTY",
+            "display": "Sync Now",
+            "icon": "AUTO_RENEW",
+            "id": "sync",
+            "request": {
+              "apiEndPoint": {
+                "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/fullSyncRun",
+                "headers": {
+                  "Elements-Formula-Instance-Id": "416319"
+                },
+                "input": {
+                  "apiKey": "test_TSqLzZzcuJHololXX8W7GggFRkOAfYF98",
+                  "integrationName": "pipedrive",
+                  "isFromLayout": "true",
+                  "siteDomain": "predev3.in",
+                  "siteName": "aparna11-test",
+                  "syncNow": "syncNow",
+                  "syncNowButtonClick": "syncNow"
+                },
+                "type": "GET"
+              },
+              "type": "ON_CLICK_GET_CARD"
+            },
+            "type": "DIRECT_LINK"
+          }
+        ],
+        "heading": "Last sync done 2 Hours and 45 Minutes ago",
+        "id": "check2",
+        "subHeading": "2  records were synced with Pipedrive",
+        "type": "ACTION2"
+      },
+      "id": "overview",
+      "isCardDone": "true"
+    }
+  ],
+  "syncErrors": [
+    {
+      "card": {
+        "heading": "No Errors Found",
+        "icon": "SUCCESS",
+        "type": "ACTION"
+      },
+      "id": "sync_errors",
+      "isCardDone": "false"
+    }
+  ],
+  "unlink": {
+    "buttonLook": "MUTTED",
+    "display": "Unlink Integration",
+    "id": "unlink",
+    "popUp": {
+      "apiEndPoint": {
+        "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/unlink",
+        "headers": {
+          "Elements-Formula-Instance-Id": "420915"
+        },
+        "input": {
+          "apiKey": "test_TSqLzZzcuJHololXX8W7GggFRkOAfYF98",
+          "integrationName": "pipedrive",
+          "siteDomain": "predev3.in",
+          "siteName": "aparna11-test"
+        },
+        "type": "GET"
+      },
+      "cancelButton": "Dismiss",
+      "description": "This will remove all the configuration details such as login authentication, configurations mapping etc. If you want to sync again, you will have to start the sync process from the beginning.",
+      "submitButton": "Unlink",
+      "title": "Do you really want to unlink the integration?",
+      "type": "SIMPLE"
+    },
+    "type": "POP_UP"
+  }
+}
