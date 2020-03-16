@@ -73,9 +73,8 @@
          "apiEndPoint": {
             "type":"GET",
             "apiUrl":"https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/complteLayout.json"
-         }
-      },
-      "editConfig": {
+         },
+"editConfig": {
         "apiEndPoint": {
           "apiUrl": "https://raw.githubusercontent.com/cb-nandita/ipaas_local_pipedrive/master/edit_conf.json",
           "headers": {
@@ -89,6 +88,7 @@
         },
         "display": "Manage Sync Rules",
         "title": "Manage how Chargebee syncs data with Pipedrive"
-      },
+      }
+      }
    ]
 }
